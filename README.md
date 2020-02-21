@@ -6,7 +6,7 @@ If you don't have Expo,
 ```
 npm install expo-cli --global
 ```
-Otherwise
+Otherwise,
 ```
 cd spikesp20
 expo start
