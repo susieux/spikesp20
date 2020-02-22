@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "React Nav v5",
-    "slug": "getting-started-react-nav-v5",
+    "name": "Spikesp20",
+    "slug": "spikesp20",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
@@ -25,6 +25,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "A mobile app for iOS using React Native and other components. Made for class Spike exercise (3~ days).",
+    "githubUrl": "https://github.com/susieux/spikesp20"
   }
 }
