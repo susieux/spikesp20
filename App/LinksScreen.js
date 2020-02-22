@@ -3,29 +3,60 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as WebBrowser from 'expo-web-browser';
 import { RectButton, ScrollView } from 'react-native-gesture-handler';
+import { Image, Platform, TouchableOpacity} from 'react-native';
 
 export default function LinksScreen() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+                <Text style={styles.title}>{"\n"}</Text>
       <OptionButton
-        icon="md-school"
-        label="Read the Expo documentation"
-        onPress={() => WebBrowser.openBrowserAsync('https://docs.expo.io')}
+        icon="logo-github"
+        label="Github"
+        onPress={() => WebBrowser.openBrowserAsync('https://github.com/susieux')}
       />
 
       <OptionButton
-        icon="md-compass"
-        label="Read the React Navigation documentation"
-        onPress={() => WebBrowser.openBrowserAsync('https://reactnavigation.org')}
+        icon="logo-linkedin"
+        label="Linkedin"
+        onPress={() => WebBrowser.openBrowserAsync('https://www.linkedin.com/in/susiecs/')}
       />
 
       <OptionButton
-        icon="ios-chatboxes"
-        label="Ask a question on the forums"
-        onPress={() => WebBrowser.openBrowserAsync('https://forums.expo.io')}
+        icon="ios-brush"
+        label="p5.js Sketches (best viewed on a PC)"
+        onPress={() => WebBrowser.openBrowserAsync('https://editor.p5js.org/meowscular/sketches')}
         isLastOption
       />
+
+      <OptionButton
+        icon="logo-twitch"
+        label="Twitch"
+        onPress={() => WebBrowser.openBrowserAsync('https://twitch.tv/flipscular')}
+        isLastOption
+      />
+    
+
+      <OptionButton
+        icon="logo-twitter"
+        label="Twitter"
+        onPress={() => WebBrowser.openBrowserAsync('https://twitter.com/flipscular')}
+        isLastOption
+      />
+
+      <OptionButton
+        icon="ios-at"
+        label="ctwpsusie@gmail.com"
+      />
+
+<View style={styles.container}>
+<View style={styles.getStartedContainer}>
+<Image source={require('../assets/png/me.jpg')} style={styles.welcomeImage2}/>
+</View>
+<Text style={styles.small}>Hope to hear from you soon!</Text>
+</View>
+
     </ScrollView>
+
   );
 }
 
@@ -49,11 +80,33 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fafafa',
   },
+  getStartedContainer: {
+    alignItems: 'center',
+    marginHorizontal: 50,
+  },
   contentContainer: {
     paddingTop: 15,
   },
   optionIconContainer: {
     marginRight: 12,
+  },
+  body: {
+    fontSize: 15,
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: 0,
+    textAlign: 'center',
+  },
+  welcomeImage2: {
+    flex: 1,
+    width: 400,
+    height: 400,
+    resizeMode: 'contain'
+  },
+  small: {
+    fontSize: 13,
+    color: 'rgba(96,100,109, 1)',
+    lineHeight: 24,
+    textAlign: 'center',
   },
   option: {
     backgroundColor: '#fdfdfd',

@@ -18,7 +18,9 @@ import {
 } from "./Screens";
 import HomeScreen from "../App/HomeScreen";
 import LinksScreen from "../App/LinksScreen";
+import ClassesGoals from "../App/ClassesGoals"
 import LoginScreen from "../App/LoginScreen";
+import Demos from "../App/Demos"
 
 const AuthStack = createStackNavigator();
 const AuthStackScreen = () => (
@@ -73,14 +75,30 @@ const TabsScreen = () => (
       name="Home"
       component={HomeStackScreen}
       options={{
-        title: "Get Started",
-        tabBarIcon: ({ focused }) => (
-          <TabBarIcon focused={focused} name="md-code-working" />
-        )
+        title: 'About',
+        tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="ios-bonfire" />,
       }}
     />
-    <Tabs.Screen name="Search" component={Profile} />
-    <Tabs.Screen name="Links" component={LinksScreen} />
+
+<Tabs.Screen name="Coursework" component={ClassesGoals} options={{
+          title: 'Coursework',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+        }} />
+
+<Tabs.Screen name="Demos" component={Demos} options={{
+          title: 'Work',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-aperture" />,
+        }} />
+
+    <Tabs.Screen name="Links" component={LinksScreen} options={{
+          title: 'Contact',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-globe" />,
+        }} />
+
+<Tabs.Screen name="Profile" component={Profile} options={{
+          title: 'Profile',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="ios-body" />,
+        }} />
   </Tabs.Navigator>
 );
 
